@@ -28,6 +28,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+    /* TUS ESTILOS ORIGINALES REINSTAURADOS */
     body,
     header,
     section,
@@ -94,11 +95,34 @@
       unicode-bidi: isolate !important;
       text-align: left !important;
     }
+
+    /* ESTILOS ESPECÍFICOS DEL MENÚ MÓVIL (Adaptados al azul/blanco) */
+    #mobile-menu {
+      background-color: #003F72 !important;
+    }
+
+    @media (max-width: 767px) {
+      header > div {
+        flex-wrap: wrap !important;
+        gap: 0.75rem !important;
+      }
+
+      .lang-switch {
+        display: flex !important;
+        justify-content: center !important;
+        order: 3;
+        width: 100%;
+      }
+
+      .lang-switch button {
+        min-width: 3rem;
+        padding: 0.45rem 0.85rem;
+      }
+    }
   </style>
 </head>
 <body class="bg-white text-slate-800 font-sans overflow-x-hidden">
 
-  <!-- NAV -->
   <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-lg border-b border-slate-100">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <div class="flex items-center gap-3">
@@ -124,13 +148,46 @@
         <button type="button" data-lang="ar">AR</button>
       </div>
 
-      <a href="#contacto" class="hidden md:inline-flex bg-primary text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-accent transition">
+      <a href="#contacto" class="hidden md:inline-flex bg-white text-primary px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-slate-100 transition" style="background-color: #ffffff !important; color: #003F72 !important;">
         Solicitar presupuesto
       </a>
+
+      <button id="menu-toggle-btn" type="button" class="inline-flex md:hidden p-2 focus:outline-none shrink-0" aria-label="Abrir menú">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
     </div>
   </header>
 
-  <!-- HERO -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col">
+    <div class="px-6 py-4 flex items-center justify-between border-b border-slate-100">
+      <div class="flex items-center gap-3">
+        <div class="bg-primary text-white text-xs font-bold leading-none p-2 rounded-sm tracking-[0.35em]" style="border: 1px solid rgba(255,255,255,0.3)">
+          AR<br>ES<br>FR
+        </div>
+        <div>
+          <p class="text-lg font-semibold tracking-wide">Farid Mazari</p>
+        </div>
+      </div>
+      <button id="menu-close-btn" type="button" class="p-2 focus:outline-none" aria-label="Cerrar menú">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="flex-1 flex flex-col justify-center items-center px-6 space-y-8 text-xl font-bold">
+      <a href="#servicios" class="mobile-link hover:opacity-80 transition">Servicios</a>
+      <a href="#sobre-mi" class="mobile-link hover:opacity-80 transition">Sobre mí</a>
+      <a href="#idiomas" class="mobile-link hover:opacity-80 transition">Idiomas</a>
+      <a href="#contacto" class="mobile-link hover:opacity-80 transition">Contacto</a>
+      <a href="#contacto" class="mobile-link inline-flex bg-white text-primary px-8 py-3.5 rounded-full text-base font-semibold hover:bg-slate-100 transition" style="background-color: #ffffff !important; color: #003F72 !important;">
+        Solicitar presupuesto
+      </a>
+    </div>
+  </div>
+
   <section class="relative min-h-screen flex items-center overflow-hidden bg-secondary">
 
     <div class="absolute top-0 right-0 w-[45rem] h-[45rem] bg-primary/10 rounded-full blur-3xl"></div>
@@ -140,7 +197,7 @@
 
       <div>
         <div class="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full px-4 py-2 text-sm mb-8 shadow-sm">
-          <span class="w-2 h-2 rounded-full bg-primary"></span>
+          <span class="w-2 h-2 rounded-full bg-primary" style="background-color: #ffffff !important;"></span>
           Interpretación profesional para eventos internacionales
         </div>
 
@@ -154,7 +211,7 @@
         </p>
 
         <div class="mt-10 flex flex-wrap gap-4">
-          <a href="#contacto" class="bg-primary text-white px-7 py-4 rounded-full font-semibold hover:bg-accent transition shadow-lg shadow-primary/20">
+          <a href="#contacto" class="bg-primary text-white px-7 py-4 rounded-full font-semibold hover:bg-accent transition shadow-lg shadow-primary/20" style="background-color: #ffffff !important; color: #003F72 !important;">
             Reservar interpretación
           </a>
 
@@ -193,7 +250,7 @@
         <div class="absolute -bottom-8 -left-8 bg-white rounded-3xl p-6 shadow-soft border border-slate-100 max-w-xs">
           <p class="text-sm uppercase tracking-[0.2em] text-slate-400 mb-2">Idiomas</p>
           <div class="flex gap-3">
-            <span class="bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">AR</span>
+            <span class="bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold" style="background-color: #ffffff !important; color: #003F72 !important;">AR</span>
             <span class="bg-slate-100 px-4 py-2 rounded-full text-sm font-semibold">ES</span>
             <span class="bg-slate-100 px-4 py-2 rounded-full text-sm font-semibold">FR</span>
           </div>
@@ -203,7 +260,6 @@
     </div>
   </section>
 
-  <!-- SERVICIOS -->
   <section id="servicios" class="py-28 bg-white">
     <div class="max-w-7xl mx-auto px-6">
 
@@ -217,7 +273,7 @@
       <div class="mt-16 grid md:grid-cols-2 xl:grid-cols-4 gap-8">
 
         <div class="bg-secondary rounded-3xl p-8 border border-slate-100 hover:-translate-y-1 transition duration-300">
-          <div class="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center text-xl font-bold">
+          <div class="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center text-xl font-bold" style="background-color: #ffffff !important; color: #003F72 !important;">
             01
           </div>
           <h4 class="mt-6 text-xl font-semibold">Interpretación simultánea</h4>
@@ -227,7 +283,7 @@
         </div>
 
         <div class="bg-secondary rounded-3xl p-8 border border-slate-100 hover:-translate-y-1 transition duration-300">
-          <div class="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center text-xl font-bold">
+          <div class="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center text-xl font-bold" style="background-color: #ffffff !important; color: #003F72 !important;">
             02
           </div>
           <h4 class="mt-6 text-xl font-semibold">Interpretación consecutiva</h4>
@@ -237,7 +293,7 @@
         </div>
 
         <div class="bg-secondary rounded-3xl p-8 border border-slate-100 hover:-translate-y-1 transition duration-300">
-          <div class="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center text-xl font-bold">
+          <div class="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center text-xl font-bold" style="background-color: #ffffff !important; color: #003F72 !important;">
             03
           </div>
           <h4 class="mt-6 text-xl font-semibold">Eventos híbridos y online</h4>
@@ -247,7 +303,7 @@
         </div>
 
         <div class="bg-secondary rounded-3xl p-8 border border-slate-100 hover:-translate-y-1 transition duration-300">
-          <div class="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center text-xl font-bold">
+          <div class="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center text-xl font-bold" style="background-color: #ffffff !important; color: #003F72 !important;">
             04
           </div>
           <h4 class="mt-6 text-xl font-semibold">Asesoría lingüística</h4>
@@ -260,7 +316,6 @@
     </div>
   </section>
 
-  <!-- SOBRE MI -->
   <section id="sobre-mi" class="py-28 bg-slate-50">
     <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
 
@@ -295,7 +350,7 @@
         <div class="mt-10 space-y-6">
 
           <div class="flex gap-5">
-            <div class="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center font-bold">✓</div>
+            <div class="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center font-bold" style="background-color: #ffffff !important; color: #003F72 !important;">✓</div>
             <div>
               <h4 class="font-semibold text-lg">Confidencialidad y precisión</h4>
               <p class="text-slate-600 mt-1">Máxima profesionalidad en entornos institucionales y corporativos.</p>
@@ -303,7 +358,7 @@
           </div>
 
           <div class="flex gap-5">
-            <div class="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center font-bold">✓</div>
+            <div class="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center font-bold" style="background-color: #ffffff !important; color: #003F72 !important;">✓</div>
             <div>
               <h4 class="font-semibold text-lg">Adaptación cultural</h4>
               <p class="text-slate-600 mt-1">Comunicación natural entre diferentes contextos lingüísticos y culturales.</p>
@@ -311,7 +366,7 @@
           </div>
 
           <div class="flex gap-5">
-            <div class="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center font-bold">✓</div>
+            <div class="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center font-bold" style="background-color: #ffffff !important; color: #003F72 !important;">✓</div>
             <div>
               <h4 class="font-semibold text-lg">Cobertura internacional</h4>
               <p class="text-slate-600 mt-1">Disponibilidad para eventos presenciales, híbridos y remotos.</p>
@@ -324,7 +379,6 @@
     </div>
   </section>
 
-  <!-- IDIOMAS -->
   <section id="idiomas" class="py-28 bg-white">
     <div class="max-w-6xl mx-auto px-6 text-center">
 
@@ -337,7 +391,7 @@
       <div class="mt-16 grid md:grid-cols-3 gap-8">
 
         <div class="bg-secondary rounded-[2rem] p-10 border border-slate-100 shadow-sm">
-          <div class="w-20 h-20 mx-auto rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold">
+          <div class="w-20 h-20 mx-auto rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold" style="background-color: #ffffff !important; color: #003F72 !important;">
             AR
           </div>
           <h4 class="mt-6 text-2xl font-semibold">Árabe</h4>
@@ -345,7 +399,7 @@
         </div>
 
         <div class="bg-secondary rounded-[2rem] p-10 border border-slate-100 shadow-sm">
-          <div class="w-20 h-20 mx-auto rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold">
+          <div class="w-20 h-20 mx-auto rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold" style="background-color: #ffffff !important; color: #003F72 !important;">
             ES
           </div>
           <h4 class="mt-6 text-2xl font-semibold">Español</h4>
@@ -353,7 +407,7 @@
         </div>
 
         <div class="bg-secondary rounded-[2rem] p-10 border border-slate-100 shadow-sm">
-          <div class="w-20 h-20 mx-auto rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold">
+          <div class="w-20 h-20 mx-auto rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold" style="background-color: #ffffff !important; color: #003F72 !important;">
             FR
           </div>
           <h4 class="mt-6 text-2xl font-semibold">Francés</h4>
@@ -364,7 +418,6 @@
     </div>
   </section>
 
-  <!-- CTA -->
   <section class="py-28 bg-primary text-white relative overflow-hidden">
 
     <div class="absolute inset-0 opacity-10">
@@ -384,13 +437,12 @@
         foros empresariales y conferencias multilíngües.
       </p>
 
-      <a href="#contacto" class="inline-flex mt-10 bg-white text-primary px-8 py-4 rounded-full font-semibold hover:bg-slate-100 transition">
+      <a href="#contacto" class="inline-flex mt-10 bg-white text-primary px-8 py-4 rounded-full font-semibold hover:bg-slate-100 transition" style="background-color: #ffffff !important; color: #003F72 !important;">
         Solicitar disponibilidad
       </a>
     </div>
   </section>
 
-  <!-- CONTACTO -->
   <section id="contacto" class="py-28 bg-white">
     <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-start">
 
@@ -461,7 +513,7 @@
             <textarea rows="5" placeholder="Cuéntame los detalles de tu evento" class="w-full px-5 py-4 rounded-2xl border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
           </div>
 
-          <button class="w-full bg-primary text-white py-4 rounded-2xl font-semibold hover:bg-accent transition">
+          <button class="w-full bg-primary text-white py-4 rounded-2xl font-semibold hover:bg-accent transition" style="background-color: #ffffff !important; color: #003F72 !important;">
             Enviar solicitud
           </button>
         </form>
@@ -470,7 +522,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="border-t border-slate-100 py-8 bg-white">
     <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
 
@@ -523,7 +574,7 @@
         "Diplomacia · Empresa · Cultura": "Diplomatie · Entreprise · Culture",
         "Perfil profesional": "Profil professionnel",
         "Interpretación de alto nivel para contextos exigentes.": "Interprétation de haut niveau pour contextes exigeants.",
-        "Profesional especializado en interpretación multilingüe con experiencia en eventos internacionales, instituciones, organizaciones y reuniones estratégicas. El objetivo es garantizar una comunicación fluida, precisa y culturalmente adaptada.": "Professionnel spécialisé en interprétation multilingue, avec expérience dans les événements internationaux, institutions, organisations et réunions stratégiques. L'objectif est de garantir une communication fluide, précise et culturellement adaptée.",
+        "Profesional especializado en interpretación multilingüe con experiencia en eventos internacionales, instituciones, organizaciones y reuniones estratégicas. El objetivo es garantizar una comunicación fluida, precisa y culturalmente adaptada.": "Professionnel spécialisé en interprétation multilingue, avec expérience dans les événements internationaux, institutions, organisations et réunions stratégiques. L'objectif é de garantir une communication fluide, précise et culturellement adaptée.",
         "Confidencialidad y precisión": "Confidentialité et précision",
         "Máxima profesionalidad en entornos institucionales y corporativos.": "Professionnalisme maximal dans les environnements institutionnels et d'entreprise.",
         "Adaptación cultural": "Adaptation culturelle",
@@ -688,6 +739,24 @@
     });
 
     setLanguage(detectPreferredLanguage());
+
+    // LOGICA MENU MOVIL
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuToggleBtn = document.getElementById('menu-toggle-btn');
+    const menuCloseBtn = document.getElementById('menu-close-btn');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    function openMenu() {
+      mobileMenu.classList.remove('translate-x-full');
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.add('translate-x-full');
+    }
+
+    menuToggleBtn.addEventListener('click', openMenu);
+    menuCloseBtn.addEventListener('click', closeMenu);
+    mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
   </script>
 
 </body>
