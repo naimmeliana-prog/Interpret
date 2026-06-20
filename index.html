@@ -8,103 +8,46 @@
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Farid Mazari" />
   <meta name="theme-color" content="#003F72" />
-  <link rel="canonical" href="https://www.fmazari.com/" />
-  <meta property="og:title" content="Farid Mazari | Interpretación de Conferencias" />
-  <meta property="og:description" content="Interpretación simultánea y consecutiva en árabe, español y francés para eventos, reuniones e instituciones." />
-  <meta property="og:url" content="https://www.fmazari.com/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Farid Mazari" />
-  <meta property="og:image" content="https://www.fmazari.com/og-image.svg" />
-  <meta property="og:image:alt" content="Farid Mazari - Interpretación de conferencias" />
-  <meta property="og:locale" content="es_ES" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Farid Mazari | Interpretación de Conferencias" />
-  <meta name="twitter:description" content="Interpretación simultánea y consecutiva en árabe, español y francés para eventos, reuniones e instituciones." />
-  <meta name="twitter:image" content="https://www.fmazari.com/og-image.svg" />
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Farid Mazari",
-      "url": "https://www.fmazari.com/",
-      "image": "https://www.fmazari.com/og-image.svg",
-      "description": "Interpretación de conferencias simultánea y consecutiva en árabe, español y francés.",
-      "serviceType": ["Interpretación simultánea", "Interpretación consecutiva"],
-      "knowsLanguage": ["ar", "es", "fr"],
-      "areaServed": "Internacional"
-    }
-  </script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#003F72',
-            secondary: '#F4F7FA',
-            accent: '#0B5FA5'
-          },
-          fontFamily: {
-            sans: ['Inter', 'sans-serif']
-          },
-          boxShadow: {
-            soft: '0 10px 40px rgba(0,0,0,0.08)'
-          }
-        }
-      }
-    }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://fmazari.com" />
+  
+  <!-- Optimización de conexiones previas de red -->
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+
+  <!-- Carga limpia y ligera de Tailwind CSS (Sustituye por completo al script antiguo de desarrollo) -->
+  <link rel="stylesheet" href="https://cloudflare.com">
+
+  <!-- Carga asíncrona de Google Fonts (Evita el bloqueo de renderizado en móvil) -->
+  <link rel="stylesheet" href="https://googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"></noscript>
+
+  <!-- Metadatos de Favicon y Apple Icon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+
   <style>
     /* TUS ESTILOS ORIGINALES REINSTAURADOS */
-    body,
-    header,
-    section,
-    footer {
+    body, header, section, footer {
       background-color: #003F72 !important;
       color: #ffffff !important;
     }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    p,
-    span,
-    a,
-    label,
-    button,
-    div {
+    h1, h2, h3, h4, p, span, a, label, button, div {
       color: #ffffff !important;
     }
-
-    .bg-white,
-    .bg-secondary,
-    .bg-slate-50,
-    .bg-slate-100 {
+    .bg-white, .bg-secondary, .bg-slate-50, .bg-slate-100 {
       background-color: #003F72 !important;
     }
-
-    .border-slate-100,
-    .border-slate-200,
-    .border-slate-300 {
+    .border-slate-100, .border-slate-200, .border-slate-300 {
       border-color: rgba(255, 255, 255, 0.28) !important;
     }
-
-    input,
-    textarea {
+    input, textarea {
       background-color: rgba(255, 255, 255, 0.08) !important;
       border-color: rgba(255, 255, 255, 0.35) !important;
       color: #ffffff !important;
     }
-
-    input::placeholder,
-    textarea::placeholder {
+    input::placeholder, textarea::placeholder {
       color: rgba(255, 255, 255, 0.68) !important;
     }
-
     .lang-switch button {
       border: 1px solid rgba(255, 255, 255, 0.35);
       border-radius: 999px;
@@ -113,37 +56,29 @@
       font-weight: 700;
       transition: background-color 0.2s ease, color 0.2s ease;
     }
-
-    .lang-switch button.is-active,
-    .lang-switch button:hover {
+    .lang-switch button.is-active, .lang-switch button:hover {
       background-color: #ffffff !important;
       color: #003F72 !important;
     }
-
     .contact-ltr {
       direction: ltr !important;
       unicode-bidi: isolate !important;
       text-align: left !important;
     }
-
-    /* ESTILOS ESPECÍFICOS DEL MENÚ MÓVIL (Adaptados al azul/blanco) */
     #mobile-menu {
       background-color: #003F72 !important;
     }
-
     @media (max-width: 767px) {
       header > div {
         flex-wrap: wrap !important;
         gap: 0.75rem !important;
       }
-
       .lang-switch {
         display: flex !important;
         justify-content: center !important;
         order: 3;
         width: 100%;
       }
-
       .lang-switch button {
         min-width: 3rem;
         padding: 0.45rem 0.85rem;
@@ -151,7 +86,8 @@
     }
   </style>
 </head>
-<body class="bg-white text-slate-800 font-sans overflow-x-hidden">
+<body class="font-sans overflow-x-hidden">
+
 
   <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-lg border-b border-slate-100">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
