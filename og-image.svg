@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Farid Mazari | Interpretación de Conferencias</title>
+  <desc id="desc">Social preview image for Farid Mazari, professional conference interpretation in Arabic, Spanish and French.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#003F72"/>
+      <stop offset="100%" stop-color="#0B5FA5"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="30%" cy="25%" r="70%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="220" cy="120" r="330" fill="url(#glow)"/>
+  <circle cx="1030" cy="520" r="280" fill="#ffffff" opacity="0.08"/>
+  <rect x="84" y="84" width="1032" height="462" rx="36" fill="none" stroke="#ffffff" stroke-opacity="0.16"/>
+  <rect x="110" y="110" width="86" height="86" rx="18" fill="#ffffff" fill-opacity="0.14"/>
+  <text x="153" y="146" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#ffffff">AR</text>
+  <text x="153" y="176" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#ffffff">ES</text>
+  <text x="153" y="206" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#ffffff">FR</text>
+  <text x="245" y="155" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" letter-spacing="4" fill="#d7e8f7">FARID MAZARI</text>
+  <text x="110" y="292" font-family="Arial, Helvetica, sans-serif" font-size="82" font-weight="800" fill="#ffffff">Interpretación</text>
+  <text x="110" y="385" font-family="Arial, Helvetica, sans-serif" font-size="82" font-weight="800" fill="#ffffff">de Conferencias</text>
+  <text x="110" y="448" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="400" fill="#d7e8f7">Simultánea y consecutiva en árabe, español y francés</text>
+  <g transform="translate(770 188)">
+    <rect x="0" y="0" width="300" height="240" rx="30" fill="#ffffff" fill-opacity="0.12" stroke="#ffffff" stroke-opacity="0.2"/>
+    <circle cx="150" cy="90" r="52" fill="#ffffff" fill-opacity="0.18"/>
+    <path d="M128 86h44M128 104h44M128 122h30" stroke="#ffffff" stroke-width="10" stroke-linecap="round" opacity="0.95"/>
+    <text x="150" y="190" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#ffffff">Professional Service</text>
+  </g>
+</svg>
